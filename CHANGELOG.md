@@ -33,5 +33,5 @@ development:
 ### Changed
 - Right-click remapped to **green pen active + thumb-middle pinch**.
 
-[Unreleased]: https://github.com/ahmadmalli/gesturekeys/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/ahmadmalli/gesturekeys/releases/tag/v0.1.0
+[Unreleased]: https://github.com/madmalli05/gesturekeys/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/madmalli05/gesturekeys/releases/tag/v0.1.0

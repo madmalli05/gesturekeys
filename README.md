@@ -11,9 +11,7 @@ React + [Tauri](https://tauri.app/) desktop app. Hold a green object to drive
 the pointer, pinch to click, and use right-hand poses for keyboard actions.
 A built-in Calibration Wizard tunes the experience to your camera and hands.
 
-<!-- Badges (optional): add once the repo is on GitHub
-![CI](https://github.com/ahmadmalli/gesturekeys/actions/workflows/ci.yml/badge.svg)
--->
+![CI](https://github.com/madmalli05/gesturekeys/actions/workflows/ci.yml/badge.svg)
 
 > ⚠️ **Status:** Experimental, Windows-first hobby project under active
 > development. Expect rough edges and changing gestures.
