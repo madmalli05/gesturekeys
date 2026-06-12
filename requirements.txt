@@ -1,0 +1,10 @@
+mediapipe
+opencv-python
+pyautogui
+pillow
+pycaw
+comtypes
+screen-brightness-control
+fastapi
+uvicorn
+websockets

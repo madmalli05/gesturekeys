@@ -1,0 +1,8 @@
+# Development & CI tooling for GestureKeys.
+# Install with:  python -m pip install -r requirements-dev.txt
+#
+# Runtime dependencies live in requirements.txt. These are only needed
+# for linting, formatting, and running the test suite.
+
+ruff==0.6.9
+pytest==8.3.3

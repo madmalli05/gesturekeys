@@ -1,0 +1,22 @@
+# Normalize line endings: let Git decide on commit, keep native on checkout.
+* text=auto
+
+# Windows-specific scripts should stay CRLF.
+*.ps1   text eol=crlf
+*.bat   text eol=crlf
+*.cmd   text eol=crlf
+
+# Shell scripts should stay LF.
+*.sh    text eol=lf
+
+# Treat MediaPipe models as binary if they are ever committed.
+# (By default they are gitignored and auto-downloaded at runtime.)
+# If you decide to vendor them, enable Git LFS first:
+#   git lfs install
+#   git lfs track "*.task"
+*.task  binary
+
+# Other binary assets.
+*.png   binary
+*.ico   binary
+*.icns  binary

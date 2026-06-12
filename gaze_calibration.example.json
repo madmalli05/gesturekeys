@@ -1,0 +1,7 @@
+{
+  "_comment": "Example/neutral gaze calibration. Copy this file to gaze_calibration.json and run the in-app Calibration Wizard to generate values tuned to your camera and face. The real gaze_calibration.json is machine-specific and is intentionally git-ignored.",
+  "version": 1,
+  "coeff_x": [0, 0, 0, 0, 0, 0, 0],
+  "coeff_y": [0, 0, 0, 0, 0, 0, 0],
+  "deadzone_px": 7.0
+}

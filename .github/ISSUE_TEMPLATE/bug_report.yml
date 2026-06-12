@@ -1,0 +1,52 @@
+name: Bug report
+description: Report a problem with GestureKeys
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to file a bug! Please fill out the sections below.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the bug, including what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Launch with `.\run_gesturekeys.ps1 -Mode desktop`
+        2. Click "Start Session"
+        3. ...
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Launch mode
+      options:
+        - desktop (Tauri + API)
+        - api (backend only)
+        - tk (legacy Tkinter)
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Windows version
+      placeholder: "Windows 11 23H2"
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      placeholder: "3.10.x"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Console output / logs
+      description: Paste any backend or Tauri console output. Do not include personal data.
+      render: shell

@@ -1,0 +1,41 @@
+# Tooling configuration for the GestureKeys Python backend.
+# This file configures Ruff (lint + format) and pytest. It does NOT turn
+# the project into an installable package — the backend runs as scripts.
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+# Legacy iteration kept for reference only; don't lint it.
+extend-exclude = [
+    ".venv",
+    "ui-tauri",
+    "gesture_keyboard_v2.py",
+]
+
+[tool.ruff.lint]
+# A pragmatic, beginner-friendly rule set:
+#   E/W  pycodestyle    F  pyflakes    I  isort
+#   UP   pyupgrade      B  bugbear     C4 comprehensions
+select = ["E", "W", "F", "I", "UP", "B", "C4"]
+ignore = [
+    "E501",  # line length is handled by the formatter, not enforced hard
+    "B008",  # function calls in argument defaults (common in FastAPI)
+
+    # ── Baseline for the existing codebase ──────────────────────────────
+    # These rules currently fire on legacy code. They are kept OFF so CI is
+    # green today, and can be turned on one at a time as the code is cleaned.
+    # Most are auto-fixable:  python -m ruff check . --fix
+    "UP007",  # Optional[X] -> X | Y  (163 sites; run --fix when ready)
+    "I001",   # unsorted imports      (3 sites;  run --fix when ready)
+    "B905",   # zip() without strict= (1 site;   run --fix when ready)
+    "F841",   # unused local variable (1 site in gesture_engine.py)
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-q"

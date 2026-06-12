@@ -1,0 +1,103 @@
+# ─────────────────────────────────────────────────────────────
+# GestureKeys .gitignore
+# ─────────────────────────────────────────────────────────────
+
+# ── Python ──────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+*.egg-info/
+*.egg
+.installed.cfg
+wheels/
+share/python-wheels/
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.env
+.env.*
+!.env.example
+
+# Test / type-check / lint caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+
+# ── MediaPipe model files ───────────────────────────────────
+# These download automatically from Google's public storage on
+# first run (see ensure_models()), so we don't commit them.
+*.task
+
+# ── Personal / machine-specific calibration ─────────────────
+# Tracked example lives at gaze_calibration.example.json
+gaze_calibration.json
+calibration_profiles_v1.json
+
+# ── Node / Frontend (ui-tauri) ──────────────────────────────
+node_modules/
+.npm/
+.pnpm-store/
+.yarn/
+ui-tauri/dist/
+ui-tauri/.vite/
+*.tsbuildinfo
+
+# ── Rust / Tauri ────────────────────────────────────────────
+ui-tauri/src-tauri/target/
+# Tauri auto-generated schemas (regenerated on build)
+ui-tauri/src-tauri/gen/schemas/
+**/*.rs.bk
+
+# ── Logs & temp files ───────────────────────────────────────
+*.log
+logs/
+*.tmp
+*.temp
+*.bak
+*.pid
+*.seed
+
+# ── Editors / IDEs ──────────────────────────────────────────
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.example.json
+.idea/
+*.swp
+*.swo
+*~
+
+# ── OS cruft ────────────────────────────────────────────────
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+# Linux
+.directory
+.Trash-*
